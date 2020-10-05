@@ -10,5 +10,12 @@ package basket;
  * @author erwan
  */
 public class player {
+    private String name;
+    private String firstname;
+    private Integer age;
+    private team team;
+    private Integer points;
+    private Integer fault;
+    private Boolean in_game;  
     
 }

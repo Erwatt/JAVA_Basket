@@ -10,5 +10,8 @@ package basket;
  * @author erwan
  */
 public class basket {
+    public static void main(String Args[]){
+        
+    }
     
 }

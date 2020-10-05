@@ -10,5 +10,9 @@ package basket;
  * @author erwan
  */
 public class team {
-    
+    private player player;
+    private String team_name;
+    private String firstname;
+    private String country;
+    private stadium stadium;
 }

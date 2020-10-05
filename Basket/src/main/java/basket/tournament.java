@@ -10,5 +10,6 @@ package basket;
  * @author erwan
  */
 public class tournament {
+    private team team_name;
     
 }

@@ -9,6 +9,8 @@ package basket;
  *
  * @author erwan
  */
-public class Fault {
+public class fault {
+    private player player;
+    private coach coach;
     
 }

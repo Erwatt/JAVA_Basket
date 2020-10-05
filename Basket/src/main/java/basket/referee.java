@@ -10,5 +10,5 @@ package basket;
  * @author erwan
  */
 public class referee {
-    
+    private game game;
 }

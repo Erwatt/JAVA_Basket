@@ -10,5 +10,7 @@ package basket;
  * @author erwan
  */
 public class stadium {
+    private String name;
+    private String country;
     
 }

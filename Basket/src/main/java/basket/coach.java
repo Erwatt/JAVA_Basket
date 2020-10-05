@@ -9,6 +9,8 @@ package basket;
  *
  * @author erwan
  */
-public class Coach {
-    
+public class coach {
+    private String name;
+    private String firstname;
+    private Integer fault;
 }

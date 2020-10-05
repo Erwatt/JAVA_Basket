@@ -9,6 +9,7 @@ package basket;
  *
  * @author erwan
  */
-public class Game {
-    
+public class game {
+    private String stadium;
+    private String team;
 }

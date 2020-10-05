@@ -10,7 +10,7 @@ package basket;
  * @author erwan
  */
 public class fault {
-    private String player;
-    private String coach;
+    private player player;
+    private coach coach;
     
 }

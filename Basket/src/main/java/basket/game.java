@@ -10,6 +10,6 @@ package basket;
  * @author erwan
  */
 public class game {
-    private String stadium;
-    private String team;
+    private stadium stadium;
+    private team team_name;
 }

@@ -11,4 +11,22 @@ package basket;
  */
 public class referee {
     private game game;
+    
+    public void arbitreDit(){
+        System.out.print("L'arbitre dit au micro: ");
+    }
+    public void let() {
+        arbitreDit();
+        System.out.println("Il y a let. Veuillez recommencer à servir");
+    }
+
+    public void faute() {
+        arbitreDit();
+        System.out.println("Faute");
+    }
+    
+ /*    public void annonceScoreEchange(Joueur joueur1, Joueur joueur2, String score1, String score2){
+        arbitreDit();
+        System.out.println("le joueur: "+joueur1.getPrenom()+" a "+score1+" et le joueur: "+joueur2.getPrenom()+" a "+score2);
+    }*/
 }

@@ -18,4 +18,66 @@ public class player {
     private Integer fault;
     private Boolean in_game;  
     
+    public player (String name,String firstname,Integer age,team team,Integer points,Integer fault,Boolean in_game){
+        this.name = name;
+        this.firstname = firstname;
+        this.age = age;       
+        this.team = team;
+        this.points = points;
+        this.fault = fault;
+        this.in_game = in_game;        
+}
+    public boolean in_game(){
+        return in_game;
+    }
+    
+    public String name() {
+        return this.name;
+    }
+    
+    public String firstname() {
+        return this.firstname;
+    }
+    
+    public Integer age() {
+        return this.age;
+    }
+    
+    public team team() {
+        return this.team;
+    }    
+    
+    public Integer points() {
+        return this.points;
+    }
+    
+    public Integer fault() {
+        return this.fault;
+    }
+    
+    public void name(String name) {
+        this.name = name;
+    }
+    
+    public void firstname(String firstname) {
+        this.firstname = firstname;
+    }
+    
+    public void age(Integer age) {
+        this.age = age;
+    }
+    
+    public void team(team team) {
+        this.team = team;
+    }
+    
+    public void points(Integer points) {
+        this.points = points;
+    }
+    
+    public void fault(Integer fault) {
+        this.fault = fault;
+    }
+    
+
 }

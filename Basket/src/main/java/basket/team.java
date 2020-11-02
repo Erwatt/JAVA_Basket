@@ -15,4 +15,5 @@ public class team {
     private String firstname;
     private String country;
     private stadium stadium;
+    private Integer fault;
 }

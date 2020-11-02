@@ -10,7 +10,9 @@ package basket;
  * @author erwan
  */
 public class fault {
+    private team team;
     private player player;
     private coach coach;
-    
+    private Boolean lancer;
+    private Integer Nbr_lancer;    
 }

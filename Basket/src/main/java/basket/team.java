@@ -11,9 +11,11 @@ package basket;
  */
 public class team {
     private player player;
+    private coach coach;
     private String team_name;
     private String firstname;
     private String country;
     private stadium stadium;
     private Integer fault;
+    private Integer points;
 }

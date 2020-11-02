@@ -23,8 +23,10 @@ public class referee {
     public void faute() {
         arbitreDit();
         System.out.println("Faute");
+        new_fault(team, player, 0, 0);
         if (team.fault>5) {
             System.out.println("2 lancers");
+            new_fault(team, player, 1, 2);
         }
     }
     
@@ -33,9 +35,11 @@ public class referee {
         System.out.println("Faute");
         if (panier_marqué == 1){
             System.out.println("Panier accordé, 1 lancer");
+            new_fault(team, player, 1, 1);
         }
         else{
             System.out.println("2 lancers");
+            new_fault(team, player, 1, 2);
         }
     }
     

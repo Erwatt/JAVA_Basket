@@ -12,7 +12,15 @@ package basket;
 public class fault {
     private team team;
     private player player;
-    private coach coach;
     private Boolean lancer;
-    private Integer Nbr_lancer;    
+    private Integer Nbr_lancer;
+    
+    public fault new_fault(team team, player player, Boolean lancer, Integer Nbr_lancer){
+        fault fault = new fault()/*(team, player, lancer, Nbr_lancer)*/;
+        fault.player = player;
+        fault.team = team;
+        fault.lancer = lancer;
+        fault.Nbr_lancer = Nbr_lancer;
+        return fault;
+    }
 }

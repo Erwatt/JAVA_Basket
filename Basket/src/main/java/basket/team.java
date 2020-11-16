@@ -18,4 +18,20 @@ public class team {
     private stadium stadium;
     private Integer fault;
     private Integer points;
+
+
+    
+    public team (String team_name, String firstname, String country, String paris, int stadium, int par1) {
+        this.player=player;
+        this.team_name = team_name;
+        this.firstname = firstname;
+        this.country = country;
+       
+        
+    }
+    public team (coach coach,String team_name,String country,stadium stadium,Integer fault,Integer points) {
+    team team1 = new team("coach1","ISEN","France","Paris",0,0);
+    team team2 = new team("coach2","HEI","Belgique","BRX",0,0);
+    
+    }
 }

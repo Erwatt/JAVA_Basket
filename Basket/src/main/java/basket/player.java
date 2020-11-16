@@ -18,66 +18,28 @@ public class player {
     private Integer fault;
     private Boolean in_game;  
     
-    public player (String name,String firstname,Integer age,team team,Integer points,Integer fault,Boolean in_game){
-        this.name = name;
-        this.firstname = firstname;
-        this.age = age;       
-        this.team = team;
-        this.points = points;
-        this.fault = fault;
-        this.in_game = in_game;        
-}
-    public boolean in_game(){
-        return in_game;
+    /**
+     *
+     * @param name
+     * @param firstname
+     * @param age
+     * @param team
+     * @param points
+     * @param fault
+     * @param in_game
+     */
+    
+    
+    public player(String name, String firstname, int age, String team, int points, int fault, boolean in_game) {
+        player player1 = new player ("wattelier","erwan",21,"ISEN",0,0,true);
+        player player2 = new player ("bayeulle","adrien",21,"ISEN",0,0,true);
+        player player3 = new player ("","",21,"ISEN",0,0,true);
+        player player4 = new player ("","",21,"ISEN",0,0,true);
+        player player5 = new player ("","",21,"ISEN",0,0,true);
+        player player6 = new player ("","",21,"HEI",0,0,true);
+        player player7 = new player ("","",21,"HEI",0,0,true);
+        player player8 = new player ("","",21,"HEI",0,0,true);
+        player player9 = new player ("","",21,"HEI",0,0,true);
+        player player10 = new player ("","",21,"HEI",0,0,true);
     }
-    
-    public String name() {
-        return this.name;
-    }
-    
-    public String firstname() {
-        return this.firstname;
-    }
-    
-    public Integer age() {
-        return this.age;
-    }
-    
-    public team team() {
-        return this.team;
-    }    
-    
-    public Integer points() {
-        return this.points;
-    }
-    
-    public Integer fault() {
-        return this.fault;
-    }
-    
-    public void name(String name) {
-        this.name = name;
-    }
-    
-    public void firstname(String firstname) {
-        this.firstname = firstname;
-    }
-    
-    public void age(Integer age) {
-        this.age = age;
-    }
-    
-    public void team(team team) {
-        this.team = team;
-    }
-    
-    public void points(Integer points) {
-        this.points = points;
-    }
-    
-    public void fault(Integer fault) {
-        this.fault = fault;
-    }
-    
-
 }

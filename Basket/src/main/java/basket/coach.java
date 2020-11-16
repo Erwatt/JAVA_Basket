@@ -13,4 +13,10 @@ public class coach {
     private String name;
     private String firstname;
     private Integer fault;
+    private team teams;
+    
+  public coach (String name, String firstname, int fault, String teams) {
+    coach coach1 = new coach("roger","boris",0,"ISEN");
+    coach coach2 = new coach("hakim","carpentier",0,"HEI");
+  } 
 }

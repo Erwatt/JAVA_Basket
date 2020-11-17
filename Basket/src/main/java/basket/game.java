@@ -12,4 +12,13 @@ package basket;
 public class game {
     private stadium stadium;
     private team team_name;
+    
+    public void new_score(player player, Integer point){
+        Integer player_points = player.points();
+        player_points += point;
+        player.f5_player_points(player, player_points);
+        f5_team_points(team player.team);
+    }
+        
+    
 }

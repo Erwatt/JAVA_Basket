@@ -42,4 +42,14 @@ public class player {
         player player9 = new player ("","",21,"HEI",0,0,true);
         player player10 = new player ("","",21,"HEI",0,0,true);
     }
+    
+    Integer points(){
+        return this.points;
+    }
+    
+    public void f5_player_points(player player, Integer points){
+        player.points = points;
+        team.f5_team_points(player.team, points);
+    }
 }
+    

@@ -34,4 +34,9 @@ public class team {
     team team2 = new team("coach2","HEI","Belgique","BRX",0,0);
     
     }
+    
+    
+    public void f5_team_points(team team, Integer points){
+        team.points += points;
+    }
 }

@@ -17,7 +17,6 @@ public class game {
         Integer player_points = player.points();
         player_points += point;
         player.f5_player_points(player, player_points);
-        f5_team_points(team player.team);
     }
         
     

@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class coach {
     private String name;
@@ -16,7 +16,9 @@ public class coach {
     private team teams;
     
   public coach (String name, String firstname, int fault, String teams) {
-    coach coach1 = new coach("roger","boris",0,"ISEN");
-    coach coach2 = new coach("hakim","carpentier",0,"HEI");
+    coach coach1 = new coach("Bionne","Maxence",0,"ISEN");
+    coach coach2 = new coach("Chevillion","Tanguy",0,"HEI");
+    coach coach3 = new coach("Declercq","Gregoire",0,"ISA");
+    coach coach4 = new coach("Ducornait","Julien",0,"ICAM");
   } 
 }

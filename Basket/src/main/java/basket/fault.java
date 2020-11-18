@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class fault {
     private team team;

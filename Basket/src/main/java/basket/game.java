@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class game {
     private stadium stadium;

@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class basket {
     public static void main(String Args[]){

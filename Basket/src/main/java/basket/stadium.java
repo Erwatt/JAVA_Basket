@@ -7,17 +7,17 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class stadium {
     private String stadium_name;
     private String country;
     
     public stadium (String stadium_name,String country) {
-    stadium stadium1 = new stadium("PARIS","France");
-    stadium stadium2 = new stadium("BRX","Belgique");
-    stadium stadium3 = new stadium("LA","USA");
-    stadium stadium4 = new stadium("MTL","CANADA");
+    stadium stadium1 = new stadium("Paris","France");
+    stadium stadium2 = new stadium("Bruxelles","Belgique");
+    stadium stadium3 = new stadium("Los Angeles","USA");
+    stadium stadium4 = new stadium("Montreal","CANADA");
     
 }
 }

@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author erwan
+ * @author erwan & adrien
  */
 public class team {
     private player player;
@@ -31,7 +31,9 @@ public class team {
     }
     public team (coach coach,String team_name,String country,stadium stadium,Integer fault,Integer points) {
     team team1 = new team("coach1","ISEN","France","Paris",0,0);
-    team team2 = new team("coach2","HEI","Belgique","BRX",0,0);
+    team team2 = new team("coach2","HEI","Belgique","Bruxelles",0,0);
+    team team3 = new team("coach3","ISA","USA","Los Angeles",0,0);
+    team team4 = new team("coach4","ICAM","CANADA","Montreal",0,0);
     
     }
     

@@ -41,4 +41,12 @@ public class team {
     public void f5_team_points(team team, Integer points){
         team.points += points;
     }
+    
+    Integer fault(){
+        return this.fault;
+    }
+    
+    public void f5_team_fault(team team, Integer faults){
+        team.fault = faults;
+    }
 }

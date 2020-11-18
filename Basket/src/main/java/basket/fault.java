@@ -15,12 +15,24 @@ public class fault {
     private Boolean lancer;
     private Integer Nbr_lancer;
     
-    public fault new_fault(team team, player player, Boolean lancer, Integer Nbr_lancer){
-        fault fault = new fault()/*(team, player, lancer, Nbr_lancer)*/;
-        fault.player = player;
-        fault.team = team;
-        fault.lancer = lancer;
-        fault.Nbr_lancer = Nbr_lancer;
-        return fault;
+    
+    
+    public static void new_fault(team team, player player, Boolean lancer, Integer Nbr_lancer, player shooter){
+        Integer team_fault = team.fault();
+        team_fault += 1;
+        team.f5_team_fault(team, team_fault);
+        Integer player_fault = player.fault();
+        player_fault += 1;
+        player.f5_player_fault(player, player_fault);
+        if (player_fault > 4){
+            referee.player_out(player);
+        }
+        if (team_fault >= 5){
+            game.free_throw(shooter, 2);
+        }
+        else if(lancer == true){
+            game.free_throw(shooter, Nbr_lancer);
+        }
+        
     }
 }

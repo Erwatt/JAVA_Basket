@@ -12,7 +12,7 @@ package basket;
 public class referee {
     private game game;
     
-    public void arbitreDit(){
+    public static void arbitreDit(){
         System.out.print("L'arbitre dit au micro: ");
     }
    /* public void let() {
@@ -20,28 +20,38 @@ public class referee {
         System.out.println("Il y a let. Veuillez recommencer à servir");
     }*/
 
-    public void faute() {
+    public void faute(team team, player player, player shooter) {
         arbitreDit();
         System.out.println("Faute");
-        new_fault(team, player, 0, 0);
-        if (team.fault>5) {
+        if (team.fault()>5) {
             System.out.println("2 lancers");
-            new_fault(team, player, 1, 2);
+            fault.new_fault(team, player, true, 2, shooter);
+        }
+        else{
+            fault.new_fault(team, player, true, 0, shooter);
         }
     }
     
-    public void faute_sur_tir() {
+    public void faute_sur_tir(team team, player player, Boolean panier_marqué, player shooter) {
         arbitreDit();
         System.out.println("Faute");
-        if (panier_marqué == 1){
+        if (panier_marqué == true){
             System.out.println("Panier accordé, 1 lancer");
-            new_fault(team, player, 1, 1);
+            game.new_score(player, 2);
+            fault.new_fault(team, player, true, 2, shooter);
         }
         else{
             System.out.println("2 lancers");
-            new_fault(team, player, 1, 2);
+            fault.new_fault(team, player, true, 2, shooter);
         }
     }
+        
+    public static void player_out(player player){
+        arbitreDit();
+        System.out.println(player + "a commis 5 fautes.");
+        System.out.println("Veuillez procéder à un changement");
+    }
+    
     
  /*    public void annonceScoreEchange(Joueur joueur1, Joueur joueur2, String score1, String score2){
         arbitreDit();

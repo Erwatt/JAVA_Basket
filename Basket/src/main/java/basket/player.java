@@ -61,9 +61,17 @@ public class player {
         return this.points;
     }
     
+    Integer fault(){
+        return this.fault;
+    }
+    
     public void f5_player_points(player player, Integer points){
-        player.points = points;
+        player.points += points;
         team.f5_team_points(player.team, points);
+    }
+    
+    public void f5_player_fault(player player, Integer fault){
+        player.fault = fault;
     }
 }
     

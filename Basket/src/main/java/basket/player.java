@@ -31,15 +31,15 @@ public class player {
     
     
     public player(String name, String firstname, int age, String team, int points, int fault, boolean in_game) {
-        player player1 = new player ("Wattelier","Erwan",21,"ISEN",0,0,true);
-        player player2 = new player ("Bayeulle","Adrien",21,"ISEN",0,0,true);
-        player player3 = new player ("Mesureur","Adrien",22,"ISEN",0,0,true);
-        player player4 = new player ("Blasselle","Thibaut",20,"ISEN",0,0,true);
-        player player5 = new player ("Steve","Benjamin",22,"ISEN",0,0,true);
-        player player6 = new player ("Steve","Jeremy",22,"ISEN",0,0,true);
-        player player7 = new player ("Vasseur","Adelie",22,"HEI",0,0,true);
-        player player8 = new player ("Capoen","Alex",21,"HEI",0,0,true);
-        player player9 = new player ("Bahi","Anass",24,"HEI",0,0,true);
+        player player1  = new player ("Wattelier","Erwan",21,"ISEN",0,0,true);
+        player player2  = new player ("Bayeulle","Adrien",21,"ISEN",0,0,true);
+        player player3  = new player ("Mesureur","Adrien",22,"ISEN",0,0,true);
+        player player4  = new player ("Blasselle","Thibaut",20,"ISEN",0,0,true);
+        player player5  = new player ("Steve","Benjamin",22,"ISEN",0,0,true);
+        player player6  = new player ("Steve","Jeremy",22,"ISEN",0,0,true);
+        player player7  = new player ("Vasseur","Adelie",22,"HEI",0,0,true);
+        player player8  = new player ("Capoen","Alex",21,"HEI",0,0,true);
+        player player9  = new player ("Bahi","Anass",24,"HEI",0,0,true);
         player player10 = new player ("Monvoisin","Anthony",22,"HEI",0,0,true);
         player player11 = new player ("Aseet","Antoine",21,"HEI",0,0,true);
         player player12 = new player ("Francoise","Arnaud",21,"HEI",0,0,true);

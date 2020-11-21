@@ -7,7 +7,7 @@ package basket;
 
 /**
  *
- * @author adrie
+ * @author erwan & adrien
  */
 class Team {
     

@@ -14,10 +14,12 @@ public class stadium {
     private String country;
     
     public stadium (String stadium_name,String country) {
-    stadium stadium1 = new stadium("Paris","France");
-    stadium stadium2 = new stadium("Bruxelles","Belgique");
-    stadium stadium3 = new stadium("Los Angeles","USA");
-    stadium stadium4 = new stadium("Montreal","CANADA");
+        this.stadium_name = stadium_name;
+        this.country = country;
     
 }
+    static stadium stadium1 = new stadium("Paris","France");
+    static stadium stadium2 = new stadium("Bruxelles","Belgique");
+    static stadium stadium3 = new stadium("Los Angeles","USA");
+    static stadium stadium4 = new stadium("Montreal","CANADA");
 }

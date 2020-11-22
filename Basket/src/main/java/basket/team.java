@@ -10,10 +10,9 @@ package basket;
  * @author erwan & adrien
  */
 public class team {
-    private player player;
+    private player[] player;
     private coach coach;
     private String team_name;
-    private String firstname;
     private String country;
     private stadium stadium;
     private Integer fault;
@@ -21,23 +20,28 @@ public class team {
 
 
     
-    public team (String team_name, String firstname, String country, String paris, int stadium, int par1) {
-        this.player=player;
+    public team (String team_name,coach coach ,String country, stadium stadium, int fault, int points) {
         this.team_name = team_name;
-        this.firstname = firstname;
         this.country = country;
-       
-        
-    }
-    public team (coach coach,String team_name,String country,stadium stadium,Integer fault,Integer points) {
-    team team1 = new team("coach1","ISEN","France","Paris",0,0);
-    team team2 = new team("coach2","HEI","Belgique","Bruxelles",0,0);
-    team team3 = new team("coach3","ISA","USA","Los Angeles",0,0);
-    team team4 = new team("coach4","ICAM","CANADA","Montreal",0,0);
-    
+        this.coach = coach;
+        this.stadium = stadium;
+        this.fault = fault;
+        this.points = points;
     }
     
     
+    static team team1 = new team("ISEN", coach.coach1, "France",stadium.stadium1,0,0);
+    static team team2 = new team("HEI",coach.coach2,"Belgique",stadium.stadium2,0,0);
+    static team team3 = new team("ISA",coach.coach3,"USA",stadium.stadium3,0,0);
+    static team team4 = new team("ICAM",coach.coach4,"CANADA",stadium.stadium4,0,0);
+    
+    
+    
+    
+    player[] player(){
+        return this.player;
+    }
+     
     public void f5_team_points(team team, Integer points){
         team.points += points;
     }
@@ -48,5 +52,9 @@ public class team {
     
     public void f5_team_fault(team team, Integer faults){
         team.fault = faults;
+    }
+    
+    Integer points(){
+        return this.points;
     }
 }

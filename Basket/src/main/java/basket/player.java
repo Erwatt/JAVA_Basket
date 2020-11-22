@@ -41,6 +41,10 @@ public class Player {
 
     }
     
+    boolean in_game(){
+        return in_game;
+    }
+    
     
     Integer points(){
         return this.points;
@@ -54,13 +58,17 @@ public class Player {
         return this.fault;
     }
     
-    public void f5_player_points(Player player, Integer points){
+    public void f5_player_points(Player player, Integer points, Team team){
         player.points += points;
-        team.f5_team_points(player.team, points);
+        team.f5_team_points(team, points);
     }
     
     public void f5_player_fault(Player player, Integer fault){
         player.fault = fault;
+    }
+    
+    public void f5_player_in_game(Player player, boolean playing){
+        player.in_game = playing;
     }
 }
     

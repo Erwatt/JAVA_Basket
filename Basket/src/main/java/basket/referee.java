@@ -15,34 +15,31 @@ public class Referee {
     public void arbitreDit(){
         System.out.print("L'arbitre dit au micro: ");
     }
-   /* public void let() {
-        arbitreDit();
-        System.out.println("Il y a let. Veuillez recommencer à servir");
-    }*/
+   
 
-    public void faute(Team team, Player player, Player shooter) {
+    public void faute(Team team, Player player, Player shooter, Team shooter_team) {
         arbitreDit();
         System.out.println("Faute");
         if (team.fault()>5) {
             System.out.println("2 lancers");
-            new Fault().new_fault(team, player, true, 2, shooter);
+            new Fault().new_fault(team, player, true, 2, shooter, shooter_team);
         }
         else{
-            new Fault().new_fault(team, player, true, 0, shooter);
+            new Fault().new_fault(team, player, true, 0, shooter, shooter_team);
         }
     }
     
-    public void faute_sur_tir(Team team, Player player, Boolean panier_marqué, Player shooter) {
+    public void faute_sur_tir(Team team, Player player, Boolean panier_marqué, Player shooter, Team shooter_team) {
         arbitreDit();
         System.out.println("Faute");
         if (panier_marqué == true){
             System.out.println("Panier accordé, 1 lancer");
-            game.new_score(player, 2);
-            new Fault().new_fault(team, player, true, 2, shooter);
+            new Game().new_score(player, 2, shooter_team);
+            new Fault().new_fault(team, player, true, 1, shooter, shooter_team);
         }
         else{
             System.out.println("2 lancers");
-            new Fault().new_fault(team, player, true, 2, shooter);
+            new Fault().new_fault(team, player, true, 2, shooter, shooter_team);
         }
     }
         
@@ -52,9 +49,9 @@ public class Referee {
         System.out.println("Veuillez procéder à un changement");
     }
     
-    
- /*    public void annonceScoreEchange(Joueur joueur1, Joueur joueur2, String score1, String score2){
-        arbitreDit();
-        System.out.println("le joueur: "+joueur1.getPrenom()+" a "+score1+" et le joueur: "+joueur2.getPrenom()+" a "+score2);
-    }*/
+    public void replacement(Player player_leaving, Player player_entering){
+        player_leaving.f5_player_in_game(player_leaving, false);
+        player_entering.f5_player_in_game(player_entering, true);
+    }
+ 
 }

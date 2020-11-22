@@ -32,7 +32,9 @@ public class Team {
     }
     
      
-   
+    public String team_name(){
+        return team_name;
+    }
     
          
     public void f5_team_points(Team team, Integer points){
@@ -42,6 +44,10 @@ public class Team {
     /*ajoute les fautes a l equipe*/    
     Integer fault(){
         return this.fault;
+    }
+    
+    ArrayList<Player> player(){
+        return player;
     }
     
     public void f5_team_fault(Team team, Integer faults){

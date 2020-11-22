@@ -30,6 +30,7 @@ public class player {
      */
     
     
+
     public player(String name, String firstname, int age, team team, int points, int fault, boolean in_game) {
         this.name = name;
         this.firstname = firstname;
@@ -38,6 +39,7 @@ public class player {
         this.points = points;
         this.fault = fault;
         this.in_game = in_game;
+
     }
     player player1 = new player ("Wattelier","Erwan",21,team.team1,0,0,true); 
     player player2 = new player ("Bayeulle","Adrien",21,team.team1,0,0,true);

@@ -18,6 +18,7 @@ public class game {
         player.f5_player_points(player, points);
     }
     
+    /*lance franc*/
     public static void free_throw(player player, Integer Nbr_lancer){
         for (Integer i = 0; i < Nbr_lancer; i++){
             System.out.println("Lancer marqué ?");

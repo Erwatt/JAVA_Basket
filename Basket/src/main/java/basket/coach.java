@@ -21,6 +21,8 @@ public class coach {
     this.fault = fault;
     this.teams = teams;
   } 
+  
+  /*creation des coachs*/
   static coach coach1 = new coach("Bionne","Maxence",0,team.team1);
   static coach coach2 = new coach("Chevillion","Tanguy",0,team.team2);
   static coach coach3 = new coach("Declercq","Gregoire",0,team.team2);

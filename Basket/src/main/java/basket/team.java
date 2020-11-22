@@ -46,6 +46,7 @@ public class team {
         team.points += points;
     }
     
+    /*ajoute les fautes a l equipe*/    
     Integer fault(){
         return this.fault;
     }

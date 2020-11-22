@@ -41,6 +41,7 @@ public class player {
         this.in_game = in_game;
 
     }
+    /*creation des joueurs*/
     player player1 = new player ("Wattelier","Erwan",21,team.team1,0,0,true); 
     player player2 = new player ("Bayeulle","Adrien",21,team.team1,0,0,true);
     player player3 = new player ("Mesureur","Adrien",22,team.team1,0,0,true);
@@ -75,11 +76,14 @@ public class player {
         return this.fault;
     }
     
+    /*ajout des points au joueur*/
     public void f5_player_points(player player, Integer points){
         player.points += points;
         team.f5_team_points(player.team, points);
     }
     
+    
+   /*ajout des fautes au joueur*/
     public void f5_player_fault(player player, Integer fault){
         player.fault = fault;
     }

@@ -20,6 +20,7 @@ public class referee {
         System.out.println("Il y a let. Veuillez recommencer à servir");
     }*/
 
+    /*action de l arbitre lors d une faute*/
     public void faute(team team, player player, player shooter) {
         arbitreDit();
         System.out.println("Faute");
@@ -31,6 +32,7 @@ public class referee {
             fault.new_fault(team, player, true, 0, shooter);
         }
     }
+    
     
     public void faute_sur_tir(team team, player player, Boolean panier_marqué, player shooter) {
         arbitreDit();
@@ -46,6 +48,7 @@ public class referee {
         }
     }
         
+    /*exclusion d un joueur*/
     public static void player_out(player player){
         arbitreDit();
         System.out.println(player + "a commis 5 fautes.");

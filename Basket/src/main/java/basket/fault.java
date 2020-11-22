@@ -16,7 +16,7 @@ public class fault {
     private Integer Nbr_lancer;
     
     
-    
+    /*action lors d'une faute*/
     public static void new_fault(team team, player player, Boolean lancer, Integer Nbr_lancer, player shooter){
         Integer team_fault = team.fault();
         team_fault += 1;

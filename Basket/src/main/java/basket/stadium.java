@@ -13,11 +13,14 @@ public class stadium {
     private String stadium_name;
     private String country;
     
+    
+    
     public stadium (String stadium_name,String country) {
         this.stadium_name = stadium_name;
         this.country = country;
     
 }
+    /*creation des stades*/
     static stadium stadium1 = new stadium("Paris","France");
     static stadium stadium2 = new stadium("Bruxelles","Belgique");
     static stadium stadium3 = new stadium("Los Angeles","USA");

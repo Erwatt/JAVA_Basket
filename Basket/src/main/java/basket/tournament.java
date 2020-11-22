@@ -9,7 +9,7 @@ package basket;
  *
  * @author erwan & adrien
  */
-public class tournament {
-    private team team_name;
+public class Tournament {
+    private Team team_name;
     
 }

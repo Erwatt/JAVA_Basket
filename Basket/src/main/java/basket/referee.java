@@ -9,10 +9,10 @@ package basket;
  *
  * @author erwan & adrien
  */
-public class referee {
-    private game game;
+public class Referee {
+    private Game game;
     
-    public static void arbitreDit(){
+    public void arbitreDit(){
         System.out.print("L'arbitre dit au micro: ");
     }
    /* public void let() {
@@ -20,35 +20,35 @@ public class referee {
         System.out.println("Il y a let. Veuillez recommencer à servir");
     }*/
 
-    public void faute(team team, player player, player shooter) {
+    public void faute(Team team, Player player, Player shooter) {
         arbitreDit();
         System.out.println("Faute");
         if (team.fault()>5) {
             System.out.println("2 lancers");
-            fault.new_fault(team, player, true, 2, shooter);
+            new Fault().new_fault(team, player, true, 2, shooter);
         }
         else{
-            fault.new_fault(team, player, true, 0, shooter);
+            new Fault().new_fault(team, player, true, 0, shooter);
         }
     }
     
-    public void faute_sur_tir(team team, player player, Boolean panier_marqué, player shooter) {
+    public void faute_sur_tir(Team team, Player player, Boolean panier_marqué, Player shooter) {
         arbitreDit();
         System.out.println("Faute");
         if (panier_marqué == true){
             System.out.println("Panier accordé, 1 lancer");
             game.new_score(player, 2);
-            fault.new_fault(team, player, true, 2, shooter);
+            new Fault().new_fault(team, player, true, 2, shooter);
         }
         else{
             System.out.println("2 lancers");
-            fault.new_fault(team, player, true, 2, shooter);
+            new Fault().new_fault(team, player, true, 2, shooter);
         }
     }
         
-    public static void player_out(player player){
+    public void player_out(Player player){
         arbitreDit();
-        System.out.println(player + "a commis 5 fautes.");
+        System.out.println(player.name() + "a commis 5 fautes.");
         System.out.println("Veuillez procéder à un changement");
     }
     

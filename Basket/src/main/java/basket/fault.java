@@ -9,29 +9,26 @@ package basket;
  *
  * @author erwan & adrien
  */
-public class fault {
-    private team team;
-    private player player;
-    private Boolean lancer;
-    private Integer Nbr_lancer;
+public class Fault {
     
     
     
-    public static void new_fault(team team, player player, Boolean lancer, Integer Nbr_lancer, player shooter){
+    
+    public void new_fault(Team team, Player p, Boolean lancer, Integer Nbr_lancer, Player shooter){
         Integer team_fault = team.fault();
         team_fault += 1;
         team.f5_team_fault(team, team_fault);
-        Integer player_fault = player.fault();
+        Integer player_fault = p.fault();
         player_fault += 1;
-        player.f5_player_fault(player, player_fault);
+        p.f5_player_fault(p, player_fault);
         if (player_fault > 4){
-            referee.player_out(player);
+            new Referee().player_out(p);
         }
         if (team_fault >= 5){
-            game.free_throw(shooter, 2);
+            new Game().free_throw(shooter, 2);
         }
         else if(lancer == true){
-            game.free_throw(shooter, Nbr_lancer);
+            new Game().free_throw(shooter, Nbr_lancer);
         }
         
     }

@@ -10,15 +10,15 @@ import java.util.Scanner;
  *
  * @author erwan & adrien
  */
-public class game {
-    private stadium stadium;
-    private team team_name;
+public class Game {
+    private Stadium stadium;
+    private Team team_name;
     
-    public static void new_score(player player, Integer points){
+    public void new_score(Player player, Integer points){
         player.f5_player_points(player, points);
     }
     
-    public static void free_throw(player player, Integer Nbr_lancer){
+    public void free_throw(Player player, Integer Nbr_lancer){
         for (Integer i = 0; i < Nbr_lancer; i++){
             System.out.println("Lancer marqué ?");
             Scanner input = new Scanner(System.in);

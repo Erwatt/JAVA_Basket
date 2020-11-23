@@ -9,6 +9,8 @@ package basket;
  *
  * @author erwan & adrien
  */
+
+/*declaration des fonctions*/
 public class Coach {
     private String name;
     private String firstname;

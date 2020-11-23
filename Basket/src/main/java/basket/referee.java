@@ -9,14 +9,18 @@ package basket;
  *
  * @author erwan & adrien
  */
+
+/*declaration des fonctions*/
 public class Referee {
     private Game game;
     
+    
+    /*fonction pour annoncer que l arbitre parle*/
     public void arbitreDit(){
         System.out.print("L'arbitre dit au micro: ");
     }
    
-
+    /*faute du joueur*/
     public void faute(Team team, Player player, Player shooter, Team shooter_team) {
         arbitreDit();
         System.out.println("Faute");
@@ -29,6 +33,7 @@ public class Referee {
         }
     }
     
+    /*faute sur tir*/
     public void faute_sur_tir(Team team, Player player, Boolean panier_marqué, Player shooter, Team shooter_team) {
         arbitreDit();
         System.out.println("Faute");
@@ -42,13 +47,16 @@ public class Referee {
             new Fault().new_fault(team, player, true, 2, shooter, shooter_team);
         }
     }
-        
+      
+    
+    /*exclusion d un joueur*/
     public void player_out(Player player){
         arbitreDit();
         System.out.println(player.name() + "a commis 5 fautes.");
         System.out.println("Veuillez procéder à un changement");
     }
     
+    /*permet de faire un changement pendant le match*/
     public void replacement(Player player_leaving, Player player_entering){
         player_leaving.f5_player_in_game(player_leaving, false);
         player_entering.f5_player_in_game(player_entering, true);

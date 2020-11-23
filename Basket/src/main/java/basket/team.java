@@ -10,8 +10,10 @@ import java.util.ArrayList;
  *
  * @author erwan & adrien
  */
+
+/*declaration des fonctions*/
 public class Team {
-    private ArrayList<Player> player = new ArrayList<Player>();;
+    ArrayList<Player> player = new ArrayList<Player>();;
     private Coach coach;
     private String team_name;
     private String country;
@@ -29,6 +31,7 @@ public class Team {
         this.player = player;
         this.fault = fault;
         this.points = points;
+    
     }
     
      
@@ -36,12 +39,12 @@ public class Team {
         return team_name;
     }
     
-         
+     /*actualisation du nombre de points de l equipe*/    
     public void f5_team_points(Team team, Integer points){
         team.points += points;
     }
     
-    /*ajoute les fautes a l equipe*/    
+    
     Integer fault(){
         return this.fault;
     }
@@ -50,6 +53,7 @@ public class Team {
         return player;
     }
     
+    /*actualisation du nombre de faute pour l equipe*/
     public void f5_team_fault(Team team, Integer faults){
         team.fault = faults;
     }

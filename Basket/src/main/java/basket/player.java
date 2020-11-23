@@ -9,6 +9,8 @@ package basket;
  *
  * @author erwan & adrien
  */
+
+/*declaration des fonctions*/
 public class Player {
     private String name;
     private String firstname;
@@ -41,6 +43,7 @@ public class Player {
 
     }
     
+    /*permet de savoir si le joueur joue*/
     boolean in_game(){
         return in_game;
     }
@@ -58,15 +61,18 @@ public class Player {
         return this.fault;
     }
     
+    /*actualisation du nombre de point du joueur*/
     public void f5_player_points(Player player, Integer points, Team team){
         player.points += points;
         team.f5_team_points(team, points);
     }
     
+    /*actualisation du nombre de fautes du joueur*/
     public void f5_player_fault(Player player, Integer fault){
         player.fault = fault;
     }
     
+    /*indique si le joueur est sur le terrain*/
     public void f5_player_in_game(Player player, boolean playing){
         player.in_game = playing;
     }

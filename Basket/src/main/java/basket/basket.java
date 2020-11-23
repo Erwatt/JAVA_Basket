@@ -9,8 +9,9 @@ import java.util.ArrayList;
  */
 public class Basket {
     public static void main(String Args[]){
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in); /*Création d'un scanner*/
         
+        /*Création des joueurs*/
         Player player1 = new Player ("Wattelier","Erwan",21,0,0,true); 
         Player player2 = new Player ("Bayeulle","Adrien",21,0,0,true);
         Player player3 = new Player ("Mesureur","Adrien",22,0,0,true);
@@ -35,6 +36,8 @@ public class Basket {
         Player player22 = new Player ("Texier","Eloi",21,0,0,true);
         Player player23 = new Player ("Schelfhout","Etienne",21,0,0,true);
         Player player24 = new Player ("Dalmas","Eugenie",21,0,0,false);
+        
+        /*Création des listes de joueurs des équipes*/
         
         ArrayList<Player> players1 = new ArrayList<Player>();
         players1.add(player1);
@@ -68,24 +71,25 @@ public class Basket {
         players4.add(player23);
         players4.add(player24);
         
-        
+        /*Création des coachs*/
         Coach coach1 = new Coach("Bionne","Maxence",0);
         Coach coach2 = new Coach("Chevillion","Tanguy",0);
         Coach coach3 = new Coach("Declercq","Gregoire",0);
         Coach coach4 = new Coach("Ducornait","Julien",0);
         
+        /*Création des stade*/
         Stadium stadium1 = new Stadium("Paris","France");
         Stadium stadium2 = new Stadium("Bruxelles","Belgique");
         Stadium stadium3 = new Stadium("Los Angeles","USA");
         Stadium stadium4 = new Stadium("Montreal","CANADA");
         
-        
+        /*Création des équipe*/
         Team team1 = new Team("ISEN",coach1, "France", stadium1,players1,0,0);
         Team team2 = new Team("HEI",coach2, "Belgique", stadium2,players2,0,0);
         Team team3 = new Team("ISA",coach3,"USA",stadium3,players3,0,0);
         Team team4 = new Team("ICAM",coach4,"CANADA",stadium4,players4,0,0);
         
-        
+        /*Création de la liste d'équipe pour sélection*/
         Team teams[] = new Team[4];
         teams[0] = team1;
         teams[1] = team2;
@@ -100,10 +104,14 @@ public class Basket {
         Team playing_team_1 = teams[scan.nextInt()];
         System.out.println("Equipe n°2 :");
         Team playing_team_2 = teams[scan.nextInt()];
-        boolean game_end = false;                
+        boolean game_end = false;       /*Gère la fin de match*/     
         
+        /*Boucle principale de gestion du match*/
         while (game_end == false) {
+            /*Affichage du score*/
             System.out.println("Score     "+ playing_team_1.team_name() + " " +playing_team_1.points() + " : " + playing_team_2.team_name() + " " +playing_team_2.points());
+            
+            /*Affichage action possible*/
             System.out.println("Action possibles :");
             System.out.println("Panier marqué : 1");
             System.out.println("Faute : 2");
@@ -111,12 +119,12 @@ public class Basket {
             System.out.println("Fin de match : 4");
             Integer answer = scan.nextInt();
             switch (answer){
-                case 1:
+                case 1:  /*Gestion et actualisation du score*/
                     System.out.println("Quelle équipe a marqué ?");
                     System.out.println(playing_team_1.team_name() + " : 1");
                     System.out.println(playing_team_2.team_name() + " : 2");
                     Player scoring_player;
-                    if (scan.nextInt() == 1){
+                    if (scan.nextInt() == 1){ /*Gestion de léquipe 1*/
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_1.player().get(i).in_game() == true){
                                 System.out.println(playing_team_1.player().get(i).name() + " : " + i);
@@ -127,7 +135,7 @@ public class Basket {
                         Integer scored_points = scan.nextInt();
                         new Game().new_score(scoring_player, scored_points, playing_team_1);
                     }
-                    else if (scan.nextInt() == 2){
+                    else if (scan.nextInt() == 2){ /*Gestion de léquipe 2*/
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_2.player().get(i).in_game() == true){
                                 System.out.println(playing_team_2.player().get(i).name() + " : " + i);
@@ -140,13 +148,13 @@ public class Basket {
                     }
                 break;
 
-                case 2:
+                case 2: /*Gestion et actualisation des fautes*/
                     System.out.println("Quelle équipe a commis la faute ?");
                     System.out.println(playing_team_1.team_name() + " : 1");
                     System.out.println(playing_team_2.team_name() + " : 2");
                     Player faulting_player;
                     Player shooting_player;
-                    if (scan.nextInt() == 1){
+                    if (scan.nextInt() == 1){ /*Equipe 1*/
                         System.out.println("Quel joueur a commis la faute ?");
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_1.player().get(i).in_game() == true){
@@ -164,6 +172,7 @@ public class Basket {
                             }
                             shooting_player = playing_team_2.player().get(scan.nextInt());
                             new Referee().faute(playing_team_1, faulting_player, shooting_player, playing_team_2);
+                            /*Faute sans lancer sauf si fautes d'équipe >= 5*/
                         }
                         else if (scan.nextInt() == 1){
                             System.out.println("Qui a tiré ?");
@@ -176,13 +185,15 @@ public class Basket {
                             System.out.println("Le panier est-il marqué ? 1/0");
                             if (scan.nextInt() == 1){
                                 new Referee().faute_sur_tir(playing_team_1, faulting_player, true, shooting_player, playing_team_2);
+                                /*Faute avec 1 lancer + 2 points car panier marqué*/
                             }
                             else if (scan.nextInt() == 0){
                                 new Referee().faute_sur_tir(playing_team_1, faulting_player, false, shooting_player, playing_team_2);
+                                /*Faute avec 2 lancers*/
                             }
                         }
                     }
-                    else if (scan.nextInt() == 2){
+                    else if (scan.nextInt() == 2){ /*Equipe 2*/
                         System.out.println("Quel joueur a commis la faute ?");
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_2.player().get(i).in_game() == true){
@@ -220,13 +231,13 @@ public class Basket {
                     }
                 break;
                 
-                case 3:
+                case 3: /*Gestion et actualisation des joueurs sur le terrain*/
                     Player player_leaving;
                     Player player_entering;
                     System.out.println("Quelle équipe effectue un changement ?");
                     System.out.println(playing_team_1.team_name() + " : 1");
                     System.out.println(playing_team_2.team_name() + " : 2");
-                    if (scan.nextInt() == 1){
+                    if (scan.nextInt() == 1){ /*Equipe 1*/
                         System.out.println("Quelle joueur sort du terrain ?");
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_1.player().get(i).in_game() == true){
@@ -243,9 +254,9 @@ public class Basket {
                         }
                         player_entering = playing_team_1.player().get(scan.nextInt());
                         
-                        new Referee().replacement(player_leaving, player_entering);
+                        new Referee().replacement(player_leaving, player_entering); /*Effectue le changement*/
                     }
-                    else if (scan.nextInt() == 2){
+                    else if (scan.nextInt() == 2){ /*Equipe 2*/
                         System.out.println("Quelle joueur sort du terrain ?");
                         for (Integer i = 0; i < 6; i++){
                             if (playing_team_2.player().get(i).in_game() == true){
@@ -268,7 +279,10 @@ public class Basket {
                 
                 case 4:
                     System.out.println("Match terminé");
+                    /*Affichage du score final*/
                     System.out.println("Score     "+ playing_team_1.team_name() + " " +playing_team_1.points() + " : " + playing_team_2.team_name() + " " +playing_team_2.points());
+                    
+                    /*Affichage du vainqueur*/
                     if (playing_team_1.points() > playing_team_2.points()){
                         System.out.println("Victoire de l'équipe " + playing_team_1.team_name());
                     }
@@ -278,7 +292,7 @@ public class Basket {
                     else if (playing_team_1.points() == playing_team_2.points()){
                         System.out.println("Match nul");
                     }
-                    game_end = true;
+                    game_end = true; /*Fin de la boucle*/
                 break;
 
             }  
